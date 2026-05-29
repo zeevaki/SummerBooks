@@ -1,0 +1,35 @@
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 48px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  min-width: 0;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #032b41;
+  font-size: 24px;
+  padding: 4px;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .topBar {
+    padding: 12px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+}

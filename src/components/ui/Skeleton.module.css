@@ -1,0 +1,120 @@
+/* Base shimmer block */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 4px;
+  display: block;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── BookCard skeleton ── */
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 172px;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.cardImage {
+  width: 172px;
+  height: 172px;
+  border-radius: 4px;
+}
+
+.cardLine {
+  height: 14px;
+  border-radius: 4px;
+}
+
+.cardLineShort {
+  width: 60%;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.cardMeta {
+  width: 80%;
+  height: 12px;
+  border-radius: 4px;
+}
+
+/* ── SelectedBook skeleton ── */
+.selectedWrapper {
+  width: 100%;
+  background-color: #fbefd6;
+  border-radius: 8px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: 180px;
+}
+
+.selectedText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selectedCover {
+  width: 140px;
+  height: 200px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, #e8d9bc 25%, #ddd0ae 50%, #e8d9bc 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.selectedDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Book page skeleton ── */
+.bookPageWrapper {
+  padding: 40px 48px;
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+}
+
+.bookCoverSkeleton {
+  width: 220px;
+  height: 280px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.bookInfoWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bookDescWrapper {
+  padding: 40px 48px 40px;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Settings skeleton ── */
+.settingsWrapper {
+  padding: 40px 48px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

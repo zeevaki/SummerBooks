@@ -1,0 +1,54 @@
+.content {
+  padding: 32px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.selectedSection {
+  align-items: flex-start;
+}
+
+.selectedCardWrapper {
+  width: min(100%, 980px);
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #032b41;
+}
+
+.sectionSubtitle {
+  font-size: 14px;
+  color: #6b757b;
+  margin-top: -8px;
+}
+
+.bookRow {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.bookRow::-webkit-scrollbar {
+  height: 4px;
+}
+
+.bookRow::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.bookRow::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}

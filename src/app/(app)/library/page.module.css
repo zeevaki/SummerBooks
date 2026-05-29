@@ -1,0 +1,60 @@
+.page {
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #032b41;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 60vh;
+  text-align: center;
+  padding: 48px;
+}
+
+.illustration {
+  object-fit: contain;
+  width: 300px;
+  height: 300px;
+}
+
+.emptyText {
+  font-size: 18px;
+  font-weight: 600;
+  color: #032b41;
+  max-width: 340px;
+  line-height: 1.4;
+}
+
+.loginBtn {
+  background-color: #2bd97c;
+  color: #032b41;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 200ms;
+  min-width: 200px;
+}
+
+.loginBtn:hover {
+  background-color: #20ba68;
+}
