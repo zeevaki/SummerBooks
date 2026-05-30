@@ -7,11 +7,17 @@ import styles from "./SelectedBook.module.css";
 
 interface SelectedBookProps {
   book: Book;
+  /** When true, render as non-link so parent can handle clicks */
+  noLink?: boolean;
 }
 
-export default function SelectedBook({ book }: SelectedBookProps) {
+export default function SelectedBook({ book, noLink }: SelectedBookProps) {
+  const Container: any = noLink ? "div" : Link;
+  const containerProps = noLink ? { className: styles.card } : { href: `/book/${book.id}`, className: styles.card };
+
   return (
-    <Link href={`/book/${book.id}`} className={styles.card}>
+    // @ts-ignore - Container may be string or Link
+    <Container {...containerProps} role={noLink ? "button" : undefined}>
       <div className={styles.subtitle}>{book.subTitle}</div>
 
       <div className={styles.divider} />
@@ -35,6 +41,6 @@ export default function SelectedBook({ book }: SelectedBookProps) {
           <span>{book.duration ? formatDurationLong(book.duration) : "3 mins 23 secs"}</span>
         </div>
       </div>
-    </Link>
+    </Container>
   );
 }

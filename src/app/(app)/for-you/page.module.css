@@ -52,3 +52,26 @@
   background: #ccc;
   border-radius: 4px;
 }
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px;
+    gap: 32px;
+  }
+
+  .bookRow {
+    gap: 12px;
+  }
+
+  .selectedCardWrapper {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bookRow {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}

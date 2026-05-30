@@ -7,11 +7,19 @@ import styles from "./BookCard.module.css";
 
 interface BookCardProps {
   book: Book;
+  /** When true the card will not render a link; useful when parent handles navigation */
+  noLink?: boolean;
 }
 
-export default function BookCard({ book }: BookCardProps) {
+export default function BookCard({ book, noLink }: BookCardProps) {
+  const Container: any = noLink ? "div" : Link;
+  const containerProps = noLink
+    ? { className: styles.card }
+    : { href: `/book/${book.id}`, className: styles.card };
+
   return (
-    <Link href={`/book/${book.id}`} className={styles.card}>
+    // @ts-ignore - `Container` may be string or Link component
+    <Container {...containerProps} role={noLink ? "button" : undefined}>
       <div className={styles.imageWrapper}>
         {book.subscriptionRequired && (
           <div className={styles.pill}>Premium</div>
@@ -43,6 +51,6 @@ export default function BookCard({ book }: BookCardProps) {
           </span>
         </div>
       </div>
-    </Link>
+    </Container>
   );
 }

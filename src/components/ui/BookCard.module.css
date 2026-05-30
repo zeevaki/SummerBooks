@@ -95,3 +95,46 @@
   height: 14px;
   flex-shrink: 0;
 }
+
+@media (max-width: 1024px) {
+  .card {
+    width: 180px;
+  }
+
+  .imageWrapper {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 150px;
+  }
+
+  .imageWrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .title {
+    font-size: 13px;
+  }
+
+  .author,
+  .subTitle,
+  .metaItem {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    width: 140px;
+  }
+
+  .imageWrapper {
+    width: 140px;
+    height: 140px;
+  }
+}

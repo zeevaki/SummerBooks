@@ -25,11 +25,23 @@
 
 @media (max-width: 768px) {
   .topBar {
-    padding: 12px 20px;
+    padding: 12px 12px;
+    justify-content: space-between;
   }
 
   .hamburger {
     display: flex;
     align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .topBar {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .hamburger {
+    margin-right: 8px;
   }
 }

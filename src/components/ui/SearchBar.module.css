@@ -10,6 +10,18 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrapper {
+    max-width: 180px;
+  }
+}
+
 .input {
   box-sizing: border-box;
   width: 100%;

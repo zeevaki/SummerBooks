@@ -237,3 +237,53 @@
   cursor: pointer;
   border: none;
 }
+
+/* Responsive tweaks: make player full-width on small screens and simplify controls */
+@media (max-width: 768px) {
+  .player {
+    left: 0;
+    right: 0;
+    padding: 0 12px;
+    height: 64px;
+    gap: 8px;
+  }
+
+  .bookInfo {
+    gap: 8px;
+  }
+
+  .cover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bookText {
+    display: none;
+  }
+
+  .center {
+    flex: 1;
+    align-items: center;
+  }
+
+  .progressRow {
+    display: none;
+  }
+
+  .right {
+    display: flex;
+    gap: 8px;
+  }
+
+  .volumeBar {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .playBtn {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
